@@ -1,0 +1,17 @@
+.carousel-item img {
+    border-radius: 10px;
+  }
+  
+  .carousel-control-prev,
+  .carousel-control-next {
+    width: 5%;
+  }
+  
+  .btn-lg {
+    padding: 0.75rem 1.5rem;
+    font-size: 1.125rem;
+  }
+  
+  .text-warning {
+    color: #ffc107 !important;
+  }

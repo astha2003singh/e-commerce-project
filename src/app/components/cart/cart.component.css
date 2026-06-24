@@ -1,0 +1,20 @@
+.card {
+    border: none;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  }
+  
+  .input-group .btn {
+    border-color: #dee2e6;
+  }
+  
+  .input-group .form-control {
+    border-left: none;
+    border-right: none;
+    max-width: 60px;
+  }
+  
+  .btn-outline-danger:hover {
+    color: white;
+    background-color: #dc3545;
+    border-color: #dc3545;
+  }

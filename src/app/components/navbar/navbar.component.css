@@ -1,0 +1,11 @@
+.navbar-brand {
+    font-size: 1.5rem;
+  }
+  
+  .btn-outline-light:hover {
+    color: #0d6efd;
+  }
+  
+  .badge {
+    font-size: 0.6em;
+  }

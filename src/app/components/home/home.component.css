@@ -1,0 +1,108 @@
+.home-page {
+  background: linear-gradient(180deg, #f8faff 0%, #ffffff 100%);
+}
+
+.hero-section {
+  background: linear-gradient(135deg, #eef4ff 0%, #f9fbff 100%);
+  border-bottom: 1px solid #e7ecf5;
+}
+
+.hero-badge {
+  display: inline-block;
+  padding: 0.45rem 0.8rem;
+  border-radius: 999px;
+  background: #dcecff;
+  color: #0d6efd;
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.hero-card {
+  border-radius: 1.25rem;
+  overflow: hidden;
+  box-shadow: 0 16px 40px rgba(13, 110, 253, 0.15);
+}
+
+.hero-card img {
+  width: 100%;
+  height: 320px;
+  object-fit: cover;
+  display: block;
+}
+
+.feature-card {
+  background: #fff;
+  border: 1px solid #e9eef7;
+  border-radius: 1rem;
+  padding: 1.25rem;
+  box-shadow: 0 8px 24px rgba(15, 23, 42, 0.04);
+}
+
+.product-card {
+  border: none;
+  border-radius: 1rem;
+  overflow: hidden;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 28px rgba(15, 23, 42, 0.08);
+}
+
+.product-card img {
+  height: 220px;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+.product-card:hover img {
+  transform: scale(1.03);
+}
+
+.rating-pill {
+  background: #fff4d6;
+  color: #b87800;
+  border-radius: 999px;
+  padding: 0.3rem 0.6rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.price-tag {
+  color: #0d6efd;
+  font-size: 1.05rem;
+  font-weight: 700;
+}
+
+.cta-banner {
+  background: linear-gradient(135deg, #0d6efd 0%, #2563eb 100%);
+  color: white;
+  border-radius: 1.25rem;
+  padding: 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+.footer {
+  background: #0f172a;
+  color: #cbd5e1;
+  margin-top: 2rem;
+}
+
+.footer a {
+  color: #cbd5e1;
+  text-decoration: none;
+}
+
+.footer a:hover {
+  color: #fff;
+}
+
+.spinner-border {
+  width: 3rem;
+  height: 3rem;
+}

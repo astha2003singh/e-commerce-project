@@ -1,0 +1,103 @@
+<div class="home-page">
+  <section class="hero-section">
+    <div class="container py-5">
+      <div class="row align-items-center g-4">
+        <div class="col-lg-7">
+          <span class="hero-badge">New season arrivals</span>
+          <h1 class="display-5 fw-bold mb-3">Upgrade your everyday essentials.</h1>
+          <p class="lead text-muted mb-4">
+            Discover premium products, fast delivery, and deals curated for modern living.
+          </p>
+          <div class="d-flex flex-wrap gap-2">
+            <button class="btn btn-primary btn-lg" (click)="shopFeaturedProduct()">Shop now</button>
+            <button class="btn btn-outline-secondary btn-lg" (click)="addFeaturedProduct()" *ngIf="products[0]">Add featured item</button>
+          </div>
+        </div>
+        <div class="col-lg-5">
+          <div class="hero-card">
+            <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=900&q=80" alt="Stylish shopping experience" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="container py-5">
+    <div class="row g-4 text-center mb-4">
+      <div class="col-md-4">
+        <div class="feature-card">
+          <h5>Free shipping</h5>
+          <p>Enjoy free delivery on orders above $50.</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="feature-card">
+          <h5>Secure checkout</h5>
+          <p>Trusted payments and protected customer data.</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="feature-card">
+          <h5>24/7 support</h5>
+          <p>Our team is here whenever you need help.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="container py-5">
+    <div class="d-flex justify-content-between align-items-center mb-4">
+      <div>
+        <p class="text-primary fw-semibold mb-1">Popular products</p>
+        <h2 class="fw-bold mb-0">Trending this week</h2>
+      </div>
+      <button class="btn btn-outline-primary" (click)="shopFeaturedProduct()" *ngIf="products[0]">Browse more</button>
+    </div>
+
+    <div *ngIf="loading" class="text-center py-5">
+      <div class="spinner-border text-primary" role="status">
+        <span class="visually-hidden">Loading...</span>
+      </div>
+    </div>
+
+    <div class="row g-4" *ngIf="!loading">
+      <div class="col-md-6 col-lg-4 col-xl-3" *ngFor="let product of products.slice(0, 8)">
+        <div class="card product-card h-100 shadow-sm">
+          <img [src]="product.thumbnail" class="card-img-top" [alt]="product.title" />
+          <div class="card-body d-flex flex-column">
+            <div class="d-flex justify-content-between align-items-start mb-2">
+              <h5 class="card-title mb-0">{{ product.title }}</h5>
+              <span class="rating-pill">★ {{ product.rating }}</span>
+            </div>
+            <p class="card-text text-muted small flex-grow-1">{{ product.description | slice:0:80 }}...</p>
+            <div class="d-flex justify-content-between align-items-center mt-3">
+              <span class="price-tag">${{ product.price }}</span>
+              <div class="d-flex gap-2">
+                <button class="btn btn-outline-primary btn-sm" (click)="viewProduct(product.id)">Details</button>
+                <button class="btn btn-primary btn-sm" (click)="addToCart(product)">Add</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="container py-5">
+    <div class="cta-banner">
+      <div>
+        <p class="text-uppercase fw-semibold mb-2">Limited time offer</p>
+        <h3 class="fw-bold mb-2">Save up to 30% on selected essentials.</h3>
+        <p class="mb-0">Fresh deals drop every week. Shop now before they’re gone.</p>
+      </div>
+      <button class="btn btn-light btn-lg" (click)="shopFeaturedProduct()">Claim offer</button>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container py-4 d-flex flex-column flex-md-row justify-content-center align-items-center gap-2">
+      <span>© 2026 E-Shop. All rights reserved.</span>
+    </div>
+  </footer>
+</div>
+
